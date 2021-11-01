@@ -10,7 +10,7 @@ const RegisterPage = () => {
     const onSubmit = (data) => {
         axios({
             method: 'post',
-            url: `${process.env.API_ENDPOINT || ''}/api/v1/users/register`,
+            url: `${process.env.REACT_APP_API_ENDPOINT || ''}/api/v1/users/register`,
             data: {
                 email: data.email, 
                 username: data.username,

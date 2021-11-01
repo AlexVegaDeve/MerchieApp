@@ -14,7 +14,7 @@ const EditProduct = (props) => {
 
 
     const fetchProduct = async () => {
-        const res = await axios.get(`${process.env.API_ENDPOINT || ''}/api/v1/products/${id}`);
+        const res = await axios.get(`${process.env.REACT_APP_API_ENDPOINT || ''}/api/v1/products/${id}`);
         const json = await res.data;
         setProducts(json);
     } 
@@ -42,7 +42,7 @@ const EditProduct = (props) => {
     }, [product.name, product.brand, product.price, product.category, product.description, product.image, product.countInStock]);
 
     const onSubmit = (data) => {
-        axios.put(`/api/v1/products/${id}`, {
+        axios.put(`${process.env.REACT_APP_API_ENDPOINT || ''}/api/v1/products/${id}`, {
             name: data.name,
             brand: data.brand,
             price: data.price,

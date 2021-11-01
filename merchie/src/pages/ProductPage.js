@@ -45,18 +45,18 @@ const ProductPage = (props) => {
     }, [dispatch, successProductReview]);
 
     function handleEdit(){
-        history.push(`${process.env.API_ENDPOINT || ''}/editProduct/${id}`)
+        history.push(`${process.env.REACT_APP_API_ENDPOINT || ''}/editProduct/${id}`)
     }
 
     const handleDelete = () => {
-        axios.delete(`${process.env.API_ENDPOINT || ''}/api/v1/products/${id}`);
+        axios.delete(`${process.env.REACT_APP_API_ENDPOINT || ''}/api/v1/products/${id}`);
         history.push('/');
         window.location.reload();
         localStorage.setItem('message', 'Item has been deleted');
     }
 
     const addToCartHandler = () => {
-        history.push(`${process.env.API_ENDPOINT || ''}/myCart/${id}?qty=${qty}`)
+        history.push(`${process.env.REACT_APP_API_ENDPOINT || ''}/myCart/${id}?qty=${qty}`)
     }
 
     function submitHandler(e){

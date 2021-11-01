@@ -24,7 +24,7 @@ const CreateProduct = () => {
                     }
                 }
 
-                const { data } = await axios.post('/api/v1/upload', formData, config);
+                const { data } = await axios.post(`${process.env.REACT_APP_API_ENDPOINT || ''}/api/v1/upload`, formData, config);
                 setImage(data);
                 setUploading(false);
 
@@ -35,7 +35,7 @@ const CreateProduct = () => {
         }
 
         const onSubmit = (data) => {
-            axios.post('/api/v1/products', {
+            axios.post(`${process.env.REACT_APP_API_ENDPOINT || ''}/api/v1/products`, {
                 name: data.name,
                 brand: data.brand,
                 price: data.price,

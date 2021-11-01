@@ -16,7 +16,7 @@ const LoginPage = () => {
         const onSubmit = async (payload) => {
             // eslint-disable-next-line
             const res = await axios.post(
-                `${process.env.API_ENDPOINT || ''}/api/v1/users/login`, 
+                `${(process.env.REACT_APP_API_ENDPOINT)}/api/v1/users/login`, 
                 {
                 username: payload.username,
                 password: payload.password}, 
@@ -33,6 +33,7 @@ const LoginPage = () => {
                     history.push('/login');
                 })           
         }
+        console.log(process.env.REACT_APP_API_ENDPOINT);
         return(
             <div className="col-md-6 offset-md-3 col-xl-3 offset-xl-4 align-items-center pt-5">
                     {localStorage.message && <Message>{localStorage.message}</Message>}
