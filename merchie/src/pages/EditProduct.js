@@ -14,7 +14,7 @@ const EditProduct = (props) => {
 
 
     const fetchProduct = async () => {
-        const res = await axios.get(`/api/v1/products/${id}`);
+        const res = await axios.get(`${process.env.API_ENDPOINT || ''}/api/v1/products/${id}`);
         const json = await res.data;
         setProducts(json);
     } 

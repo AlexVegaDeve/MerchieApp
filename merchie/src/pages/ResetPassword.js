@@ -18,7 +18,7 @@ const ResetPassword = () => {
     const onSubmit = async (payload) => {
         // eslint-disable-next-line
         const res = await axios.put(
-            `/api/v1/users/myAccount/${id}`, 
+            `${process.env.API_ENDPOINT || ''}/api/v1/users/myAccount/${id}`, 
             {
             password: payload.password}, 
             config
