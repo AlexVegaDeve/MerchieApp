@@ -66,8 +66,6 @@ const ProductPage = (props) => {
         }))
     }
 
-    console.log(product)
-
     return(
         
         <>

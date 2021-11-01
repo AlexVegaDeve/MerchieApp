@@ -33,7 +33,7 @@ const LoginPage = () => {
                     history.push('/login');
                 })           
         }
-        console.log(process.env.REACT_APP_API_ENDPOINT);
+
         return(
             <div className="col-md-6 offset-md-3 col-xl-3 offset-xl-4 align-items-center pt-5">
                     {localStorage.message && <Message>{localStorage.message}</Message>}

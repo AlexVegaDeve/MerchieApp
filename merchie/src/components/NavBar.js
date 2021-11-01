@@ -19,7 +19,6 @@ const NavBar = () => {
     }
 
     let userSession = JSON.parse(sessionStorage.getItem('userInfo'))
-    // console.log(userSession.user);
 
         return(
             <div className="nav-cont py-3">
