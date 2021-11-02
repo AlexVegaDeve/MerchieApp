@@ -56,7 +56,7 @@ const ProductPage = (props) => {
     }
 
     const addToCartHandler = () => {
-        history.push(`${process.env.REACT_APP_API_ENDPOINT || ''}/myCart/${id}?qty=${qty}`)
+        history.push(`/myCart/${id}?qty=${qty}`)
     }
 
     function submitHandler(e){
