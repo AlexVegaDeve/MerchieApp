@@ -45,7 +45,7 @@ const ProductPage = (props) => {
     }, [dispatch, successProductReview]);
 
     function handleEdit(){
-        history.push(`${process.env.REACT_APP_API_ENDPOINT || ''}/editProduct/${id}`)
+        history.push(`/editProduct/${id}`)
     }
 
     const handleDelete = () => {
