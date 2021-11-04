@@ -23,11 +23,9 @@ const ResetPassword = () => {
             password: payload.password}, 
             config
             ).then(function (res){
-              localStorage.setItem('message', 'You have changed your password');
               history.push('/')
               window.location.reload() //reload session to see new state
             }).catch( error => {
-                localStorage.setItem('message', 'Invalid username or password');
                 console.log(error);
             })           
     }

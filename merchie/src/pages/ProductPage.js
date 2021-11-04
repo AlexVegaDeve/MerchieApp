@@ -52,7 +52,6 @@ const ProductPage = (props) => {
         axios.delete(`${process.env.REACT_APP_API_ENDPOINT || ''}/api/v1/products/${id}`);
         history.push('/');
         window.location.reload();
-        localStorage.setItem('message', 'Item has been deleted');
     }
 
     const addToCartHandler = () => {

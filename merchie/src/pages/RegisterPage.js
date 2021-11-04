@@ -17,7 +17,6 @@ const RegisterPage = () => {
                 password: data.password 
             }
         })
-        localStorage.setItem('message', 'You have successfully registered! Please sign in.');
         history.push('/login')
     }
         return(

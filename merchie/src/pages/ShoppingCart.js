@@ -29,7 +29,6 @@ const ShoppingCart = ( { match, location, history} ) => {
             history.push('/shipping');
         } else {
             history.push('/login');
-            localStorage.setItem('message', 'Please login to checkout') ;
         }
     }
 

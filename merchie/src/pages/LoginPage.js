@@ -24,11 +24,9 @@ const LoginPage = () => {
                 ).then(function (res){
                   const user  = res.data;
                   sessionStorage.setItem('userInfo', JSON.stringify(user) ); // add user session to sessionStorage
-                  localStorage.setItem('message', 'You have been logged in!');
                   history.push('/')
                   window.location.reload() //reload session to see new state
                 }).catch( error => {
-                    localStorage.setItem('message', 'Invalid username or password');
                     console.log(error);
                     history.push('/login');
                 })           
