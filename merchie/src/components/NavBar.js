@@ -33,9 +33,9 @@ const NavBar = () => {
                     </Nav>
                     <Nav className="justify-content">
                     <NavLink to="/myCart" className="nav-link" activeClassName="active" onClick={() => setExpanded(false)}><i className='fas fa-shopping-cart'/> Cart </NavLink>
-                    {!userSession && <NavLink to="/register" className="nav-link" activeClassName="active" onClick={() => setExpanded(false)}> <i className="fa-solid fa-bars"/> Register </NavLink>}
-                    <NavLink disabled to="/login"   className={userSession ? 'nav-link disabled': 'nav-link'} activeClassName="active" onClick={() => setExpanded(false)}><i className={userSession ? '' : 'fas fa-user'}/>{userSession ? `Hello, ${userSession.username}` : 'Login'}</NavLink>
-                    {userSession && <NavLink to="/myAccount" className="nav-link" activeClassName="active" onClick={() => setExpanded(false)}><i className="fas fa-person"/> My Account </NavLink>}
+                    {!userSession && <NavLink to="/register" className="nav-link" activeClassName="active" onClick={() => setExpanded(false)}> <i className="fa-solid fa-bars me-1"/> Register </NavLink>}
+                    <NavLink disabled to="/login"   className={userSession ? 'nav-link disabled': 'nav-link'} activeClassName="active" onClick={() => setExpanded(false)}><i className={userSession ? '' : 'fas fa-user me-1'}/>{userSession ? `Hello, ${userSession.username}` : 'Login'}</NavLink>
+                    {userSession && <NavLink to="/myAccount" className="nav-link" activeClassName="active" onClick={() => setExpanded(false)}><i className="fas fa-person me-1"/> My Account </NavLink>}
                     {userSession && <Nav.Item onClick={logoutHandler} className="nav-link" >Logout</Nav.Item> }                                                                                             
                     </Nav>
                     </Navbar.Collapse>
